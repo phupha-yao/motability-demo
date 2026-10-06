@@ -10,6 +10,7 @@ import { useDraft } from '../store/draft';
 import { useReportStore } from '../store/reports';
 import { isEmbedded } from '../components/PhoneFrame';
 import { CicelyLayout, PrimaryButton, SecondaryButton, TextButton, Tile } from './ui';
+import { IMPACT_ICONS } from './impactIcons';
 
 const article = (label: string) => `the ${label.toLowerCase()}`;
 
@@ -140,11 +141,19 @@ export function WhatHappened() {
       <fieldset>
         <legend className="mb-3 text-base">Choose all that apply.</legend>
         <div className="grid gap-2">
-          {IMPACTS.map((i) => (
-            <Tile key={i.id} selected={impacts.includes(i.id)} onClick={() => toggle(i.id)} icon={i.icon}>
-              {i.label}
-            </Tile>
-          ))}
+          {IMPACTS.map((i) => {
+            const Icon = IMPACT_ICONS[i.id];
+            return (
+              <Tile
+                key={i.id}
+                selected={impacts.includes(i.id)}
+                onClick={() => toggle(i.id)}
+                icon={<Icon size={20} strokeWidth={2} aria-hidden="true" />}
+              >
+                {i.label}
+              </Tile>
+            );
+          })}
         </div>
       </fieldset>
       <fieldset className="mt-6">

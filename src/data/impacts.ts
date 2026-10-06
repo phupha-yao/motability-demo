@@ -1,12 +1,12 @@
 export const IMPACTS = [
-  { id: 'too_much_strength', label: 'Needed too much strength', icon: '💪' },
-  { id: 'hard_to_reach', label: 'Hard to reach', icon: '↕' },
-  { id: 'hard_to_see', label: 'Hard to see or read', icon: '👁' },
-  { id: 'hard_to_understand', label: 'Hard to understand', icon: '?' },
-  { id: 'needed_help', label: 'Needed help from someone', icon: '🤝' },
-  { id: 'felt_unsafe', label: 'Felt unsafe', icon: '⚠' },
-  { id: 'could_not_charge', label: 'Could not charge', icon: '⛔' },
-  { id: 'something_else', label: 'Something else', icon: '…' },
+  { id: 'too_much_strength', label: 'Needed too much strength' },
+  { id: 'hard_to_reach', label: 'Hard to reach' },
+  { id: 'hard_to_see', label: 'Hard to see or read' },
+  { id: 'hard_to_understand', label: 'Hard to understand' },
+  { id: 'needed_help', label: 'Needed help from someone' },
+  { id: 'felt_unsafe', label: 'Felt unsafe' },
+  { id: 'could_not_charge', label: 'Could not charge' },
+  { id: 'something_else', label: 'Something else' },
 ] as const;
 
 export type ImpactId = (typeof IMPACTS)[number]['id'];

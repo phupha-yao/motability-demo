@@ -147,9 +147,9 @@ export default function OperatorView({ embedded = false, highlightId: highlightP
       )}
 
       {tab === 'charger' && (
-        <div className="grid flex-1 gap-4 p-4 lg:grid-cols-[230px_minmax(0,1fr)_360px]">
+        <div className="grid flex-1 gap-4 p-4 lg:grid-cols-[272px_minmax(0,1fr)_340px]">
           <aside className="rounded-2xl bg-paper/50 p-4 lg:max-h-[calc(100dvh-110px)] lg:overflow-y-auto">
-            <FilterRail filters={filters} onChange={setFilters} count={filtered.length} />
+            <FilterRail filters={filters} onChange={setFilters} reports={reports} generation={generation} />
           </aside>
 
           <section aria-label="Charger model" className="flex min-w-0 flex-col">
